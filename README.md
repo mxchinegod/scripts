@@ -5,6 +5,6 @@ Engineer toolbox.
 
 Instantiate this folder in `~/.bashrc`.
 
-`sed "alias <some_command>='/your/command/path/script.sh'" ~/.bashrc && source ~/.bashrc`
+`printf "\nalias kubenuke='/your/path/scripts/kubectl/kubeNuke.sh'" >> ~/.bashrc && source ~/.bashrc`
 
-then try your new command.
+then try your new cli command.
