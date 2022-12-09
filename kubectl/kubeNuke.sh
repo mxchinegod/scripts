@@ -7,4 +7,4 @@ printf "${RED}Clever delete of "$1" commenced \n${NC}"
 kubectl get namespace $NAMESPACE -o json > $NAMESPACE.json
 sed -i -e 's/"kubernetes"//' $NAMESPACE.json
 kubectl replace --raw "/api/v1/namespaces/$NAMESPACE/finalize" -f ./$NAMESPACE.json
-printf "\n${RED}Got that disgusting shit out of here... you may continue." 
+printf "\n ${RED}Got that disgusting shit out of here... you may continue." 
