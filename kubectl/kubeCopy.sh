@@ -13,6 +13,6 @@ else
   NC='\033[0m' # No Color
   printf "${RED}Copying of "$PATH" from "$POD" in namespace "$NAMESPACE" commenced \n${NC}"
   echo "kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE"
-  /Applications/Rancher\ Desktop.app/Contents/Resources/resources/darwin/bin/kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE
+  kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE
   printf "\n${RED}Copy was successful."
 fi
