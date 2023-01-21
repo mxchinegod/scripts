@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 PURPLE="\e[35m"
 ENDCOLOR="\e[0m"
 
@@ -58,11 +58,11 @@ theme () {
     echo "eval '$(starship init zsh)'" >> ~/.zshrc
     brew tap homebrew/cask-fonts
     brew install --cask font-hack-nerd-font
-    curl https://github.com/sindresorhus/iterm2-snazzy/raw/main/Snazzy.itermcolors --output Snazzy.itermcolors 
+    curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors' -v
     open Snazzy.itermcolors
     purple "Theme installed."
     sleep 0.5
-    rm ./Snazzy.itermcolors
+    rm Snazzy.itermcolors
     defaults write com.apple.dock \
         persistent-apps -array "$(__dock_item /Applications/iTerm.app)"
     purple "Restarting Dock"
