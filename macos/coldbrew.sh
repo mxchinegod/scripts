@@ -20,7 +20,7 @@ __dock_item() {
 # It's checking if you have Homebrew installed. If you don't, it's going to install it.
 start () {
     command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now ⛔️"; \
-        /bin/bash -c "$(curl -fsSL https:#raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
         purple "✅ Adding brew to your PATH ✅"; \
         echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile; \
         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile; \
@@ -36,7 +36,7 @@ omz () {
             purple "✅ You already have Oh-My-Zsh. ✅"
         else
             purple "📀 Installing Oh-My-Zsh 📀" 
-            sh -c "$(curl -fsSL https:#raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+            sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
             purple "📡 Going to try to update Oh-My-Zsh for the first time 📡"
             omz update
     fi
