@@ -5,6 +5,7 @@ PATH=$3
 FILE=$4
 POD=$5
 
+# This is a shell script that is used to copy files from a pod to the local machine.
 if [ "$1" == "-h" ]; then
   echo "Usage: kubeCopy.sh [config] [namespace] [remote path] [local file] [pod]"
   exit 0
