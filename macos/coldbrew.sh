@@ -18,6 +18,10 @@ __dock_item() {
 start () {
     command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now ⛔️"; \
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; }
+    purple "✅ Adding brew to your PATH"
+    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     zsh
 }
 
