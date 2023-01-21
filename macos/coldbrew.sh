@@ -17,11 +17,11 @@ __dock_item() {
 
 start () {
     command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now ⛔️"; \
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; }
-    purple "✅ Adding brew to your PATH"
-    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+        purple "✅ Adding brew to your PATH ✅"; \
+        echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile; \
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile; \
+        eval "$(/opt/homebrew/bin/brew shellenv)"; }
     zsh
 }
 
@@ -56,6 +56,12 @@ iterm () {
     theme
 }
 
+raycast () {
+    purple "🌞 Installing RayCast 🌞"
+    brew install --cask raycast
+    finish
+}
+
 theme () {
     purple "📀 Installing theme... 📀"
     brew install starship
@@ -67,6 +73,10 @@ theme () {
     purple "🎨 Theme installed 🎨"
     sleep 0.5
     rm Snazzy.itermcolors
+    raycast
+}
+
+finish () {
     defaults write com.apple.dock \
         persistent-apps -array "$(__dock_item /Applications/iTerm.app)"
     purple "🧑‍💻 Restarting Dock 🧑‍💻"
