@@ -58,7 +58,7 @@ theme () {
     echo "eval '$(starship init zsh)'" >> ~/.zshrc
     brew tap homebrew/cask-fonts
     brew install --cask font-hack-nerd-font
-    curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors' -v
+    curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors'
     open Snazzy.itermcolors
     purple "Theme installed."
     sleep 0.5
