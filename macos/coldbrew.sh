@@ -183,9 +183,11 @@ finish () {
     defaults write com.apple.dock \
         persistent-apps -array-add "$(__dock_item /Applications/Visual\ Studio\ Code.app)"
     defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Docker\ Desktop.app)"
+        persistent-apps -array-add "$(__dock_item /Applications/Docker.app)"
     defaults write com.apple.dock \
         persistent-apps -array-add "$(__dock_item /Applications/Lens.app)"
+    defaults write com.apple.dock \
+        persistent-apps -array-add "$(__dock_item /Applications/Notion.app)"
     purple "🧑‍💻 Restarting Dock 🧑‍💻"
     killall Dock
     purple "✨ SUCCESS! ✨ Import iterm.json into iTerm to finish."
