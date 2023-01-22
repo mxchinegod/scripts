@@ -115,7 +115,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 <h3 align="center" id="-kubernetes-">⌨️ <code>kubernetes/</code></h3>
 <p align="center">
     🗂️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
-        <small align="center">[config] [namespace] [remote path] [local file] [pod]</small>
+        <code align="center">[config] [namespace] [remote path] [local file] [pod]</code>
 
 </p>
 
