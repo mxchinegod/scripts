@@ -157,6 +157,22 @@ lens () {
         purple '📀 Installing Lens 📀'
         brew install --cask lens
     fi
+    notion
+}
+
+notion () {
+    if open -a "Notion.app" --hide; then
+        purple "⛔️ Notion is already installed ⛔️"
+    else
+        purple "🙋 Would you like to install excellent note-taking app, Notion❓ (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "📀 Installing Notion 📀"
+            brew cask install notion
+        else
+            purple "⛔️ Notion installation cancelled ⛔️"
+        fi
+    fi
     finish
 }
 
