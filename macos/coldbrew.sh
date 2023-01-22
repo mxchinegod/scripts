@@ -30,6 +30,20 @@ start () {
 
 # It's checking if you're using ZSH. If you are, it's going to install Oh-My-Zsh. If you're not, it's
 # going to install ZSH and then Oh-My-Zsh.
+zsh () {
+    if [ "$SHELL" = "/bin/zsh" ]
+        then
+            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https:#ohmyz.sh) ✅"
+            omz
+        else
+            purple "⛔️ You're not using ZSH, going to fix that for you. ⛔️"
+            brew install zsh
+            zsh
+    fi
+}
+
+# It's checking if you're using ZSH. If you are, it's going to install Oh-My-Zsh. If you're not, it's
+# going to install ZSH and then Oh-My-Zsh.
 omz () {
     if [[ -d "/Users/$USER/.oh-my-zsh" ]]
         then 
@@ -43,32 +57,11 @@ omz () {
     iterm
 }
 
-# It's checking if you're using ZSH. If you are, it's going to install Oh-My-Zsh. If you're not, it's
-# going to install ZSH and then Oh-My-Zsh.
-zsh () {
-    if [ "$SHELL" = "/bin/zsh" ]
-        then
-            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https:#ohmyz.sh) ✅"
-            omz
-        else
-            purple "⛔️ You're not using ZSH, going to fix that for you. ⛔️"
-            brew install zsh
-            zsh
-    fi
-}
-
 # It's installing iTerm2.
 iterm () {
     purple "📀 Installing iTerm2... 📀"
     brew install iterm2
     theme
-}
-
-# It's installing RayCast.
-raycast () {
-    purple "🌞 Installing RayCast 🌞"
-    brew install --cask raycast
-    finish
 }
 
 # It's installing the theme for iTerm2.
@@ -84,6 +77,20 @@ theme () {
     sleep 0.5
     rm Snazzy.itermcolors
     raycast
+}
+
+# It's installing RayCast.
+raycast () {
+    purple "🌞 Installing RayCast 🌞"
+    brew install --cask raycast
+    neofetch
+}
+
+# It's installing Neofetch.
+neofetch () {
+    purple "🖥️ Installing Neofetch 🖥️"
+    brew install neofetch
+    finish
 }
 
 # It's adding iTerm to the dock.
