@@ -108,10 +108,10 @@ The directory includes a .json 📝 document for manually importing into iTerm2 
 ### 3️⃣
 It will also add development-related apps on your MacOS Dock & restart it.
 
-<h2 align="center">Now it's time to check out what tools you have to enhance your workflow instantly❣️
+<h3 align="center">Now it's time to check out what tools you have to enhance your workflow instantly❣️
 
 ⬇️ ⬇️ ⬇️ ⬇️
-</h2>
+</h3>
 
 # ⚙️ Tools
 
