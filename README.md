@@ -10,6 +10,8 @@
 An engineering toolbox (just MacOS for now)
 </p>
 
+# 🚀 Usage
+
 ## ✨ Initialize
 
 ### 1️⃣
@@ -106,11 +108,19 @@ The directory includes a .json 📝 document for manually importing into iTerm2 
 ### 3️⃣
 It will also add development-related apps on your MacOS Dock & restart it.
 
-## ⚙️ Tools
+<h2 align="center">Now it's time to check out what tools you have to enhance your workflow instantly❣️
 
-😴
+⬇️ ⬇️ ⬇️ ⬇️
+</h2>
 
-## ✅ To-Do
+# ⚙️ Tools
+
+<h3 align="center" id="-kubernetes-">⌨️ <code>kubernetes/</code></h3>
+<p align="center">
+    🗂️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
+</p>
+
+# ✅ To-Do
 
 `README.md`
 - [ ] Explain tools & scripts philosophy beyond installer
