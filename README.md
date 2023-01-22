@@ -112,12 +112,19 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 
 # ⚙️ Tools
 
-<h3 align="center" id="-kubernetes-">⌨️ <code>kubernetes/</code></h3>
+<h3 align="center" id="-kubernetes-"><code>kubernetes/</code></h3>
 <p align="center">
-    🗂️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
+    🖨️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
         <code align="center">[config] [namespace] [remote path] [local file] [pod]</code>
-
 </p>
+<p align="center"><small>remote pod to local filesystem copy</small></p>
+
+<h3 align="center" id="-git-"><code>git/</code></h3>
+<p align="center">
+    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/whatarmy.sh"><code>whatarmy.sh</code></a>
+        <code align="center">[subfolder in ~] [repos.txt location]</code>
+</p>
+<p align="center"><small>mass clone</small></p>
 
 # ✅ To-Do
 
