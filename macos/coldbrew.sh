@@ -133,7 +133,10 @@ vscode () {
 # It's adding iTerm to the dock.
 finish () {
     defaults write com.apple.dock \
-        persistent-apps -array "$(__dock_item /Applications/iTerm.app)"
+        persistent-apps -array-add "$(__dock_item /Applications/iTerm.app)"
+    defaults write com.apple.dock \
+        persistent-apps -array-add "$(__dock_item /Applications/Visual Studio Code.app)"
+        
     purple "🧑‍💻 Restarting Dock 🧑‍💻"
     killall Dock
     purple "✨ SUCCESS! ✨ Import iterm.json into iTerm to finish."
