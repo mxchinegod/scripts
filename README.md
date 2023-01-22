@@ -112,9 +112,10 @@ It will also add development-related apps on your MacOS Dock & restart it.
 
 `/macos/coldbrew.sh`
 - [x] Add Docker Desktop install
-- [x] Add kubectl install
+- [x] Add `kubectl` install
 - [x] Add Lens install
 - [x] Add Notion install
+- [x] Add `git` install
 
 `/kubernetes/`
 - [ ] Document

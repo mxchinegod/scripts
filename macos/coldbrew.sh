@@ -90,6 +90,18 @@ theme () {
         sleep 0.5
         rm Snazzy.itermcolors
     fi
+    git
+}
+
+# It's checking if git is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
+git () {
+    if ! [ -x "$(command -v git)" ]; then
+        purple "📀 Installing git... 📀"
+        brew install git
+    else 
+        purple "⛔️ git is installed already ⛔️"
+    fi
     raycast
 }
 
@@ -130,6 +142,8 @@ vscode () {
     docker
 }
 
+# It's checking if Docker is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
 docker () {
     if which docker >/dev/null; then
         purple '⛔️ Docker is already installed ⛔️'
@@ -140,6 +154,8 @@ docker () {
     kubectl
 }
 
+# It's checking if kubectl is installed. If it is, it's going to print out that it's installed. If
+# it's not, it's going to install it.
 kubectl () {
     if which kubectl >/dev/null; then
         purple '⛔️ kubectl is already installed ⛔️'
@@ -150,6 +166,8 @@ kubectl () {
     lens
 }
 
+# It's checking if Lens is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
 lens () {
     if [[ $(ls /Applications | grep "Lens.app") ]]; then
         purple '⛔️ Lens is already installed ⛔️'
@@ -160,6 +178,9 @@ lens () {
     notion
 }
 
+# It's checking if Notion is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to ask you if you want to install it. If you say yes, it's going to install it. If
+# you say no, it's going to cancel the installation.
 notion () {
     if open -a "Notion.app" --hide; then
         purple "⛔️ Notion is already installed ⛔️"
