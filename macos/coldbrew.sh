@@ -127,6 +127,36 @@ vscode () {
         purple "🧑‍💻 Installing VSCode 🧑‍💻"
         brew install --cask visual-studio-code
     fi
+    docker
+}
+
+docker () {
+    if which docker >/dev/null; then
+        purple '⛔️ Docker is already installed ⛔️'
+    else
+        purple '📀 Installing Docker 📀'
+        brew cask install docker
+    fi
+    kubectl
+}
+
+kubectl () {
+    if which kubectl >/dev/null; then
+        purple '⛔️ kubectl is already installed ⛔️'
+    else
+        purple '📀 Installing kubectl 📀'
+        brew install kubectl
+    fi
+    lens
+}
+
+lens () {
+    if [[ $(ls /Applications | grep "Lens.app") ]]; then
+        purple '⛔️ Lens is already installed ⛔️'
+    else
+        purple '📀 Installing Lens 📀'
+        brew install --cask lens
+    fi
     finish
 }
 
@@ -135,8 +165,11 @@ finish () {
     defaults write com.apple.dock \
         persistent-apps -array-add "$(__dock_item /Applications/iTerm.app)"
     defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Visual Studio Code.app)"
-        
+        persistent-apps -array-add "$(__dock_item /Applications/Visual\ Studio\ Code.app)"
+    defaults write com.apple.dock \
+        persistent-apps -array-add "$(__dock_item /Applications/Docker\ Desktop.app)"
+    defaults write com.apple.dock \
+        persistent-apps -array-add "$(__dock_item /Applications/Lens.app)"
     purple "🧑‍💻 Restarting Dock 🧑‍💻"
     killall Dock
     purple "✨ SUCCESS! ✨ Import iterm.json into iTerm to finish."
