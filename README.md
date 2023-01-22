@@ -20,7 +20,7 @@ which installs:
 
 & includes a .json document for manually importing into iTerm2 settings which will set terminal colors, window appearance, and font for you.
 
-It will also add development-related apps on your MacOS Dock & restart
+It will also add development-related apps on your MacOS Dock & restart it.
 
 ## To-Do
 
