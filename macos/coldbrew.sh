@@ -9,12 +9,15 @@ purple () {
 
 # It's adding iTerm to the dock.
 __dock_item() {
-    printf '%s%s%s%s%s' \
-           '<dict><key>tile-data</key><dict><key>file-data</key><dict>' \
-           '<key>_CFURLString</key><string>' \
-           "$1" \
-           '</string><key>_CFURLStringType</key><integer>0</integer>' \
-           '</dict></dict></dict>'
+    # Get the list of apps in the Dock
+    DOCK_APPS=$(defaults read com.apple.dock persistent-apps)
+    # Check if the app is already in the Dock
+    if ! echo $DOCK_APPS | grep "$1" >/dev/null; then
+        # Add the app to the Dock
+        defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$2</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
+    else
+        purple "⛔️ $1 already in the Dock ⛔️"
+    fi
 }
 
 # It's checking if you have Homebrew installed. If you don't, it's going to install it.
@@ -199,16 +202,11 @@ notion () {
 
 # It's adding iTerm to the dock.
 finish () {
-    defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/iTerm.app)"
-    defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Visual\ Studio\ Code.app)"
-    defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Docker.app)"
-    defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Lens.app)"
-    defaults write com.apple.dock \
-        persistent-apps -array-add "$(__dock_item /Applications/Notion.app)"
+    __dock_item "iTerm" "iTerm.app"
+    __dock_item "Visual Studio Code" "Visual Studio Code.app"
+    __dock_item "Docker" "Docker.app"
+    __dock_item "Lens" "Lens.app"
+    __dock_item "Notion" "Notion.app"
     purple "🧑‍💻 Restarting Dock 🧑‍💻"
     killall Dock
     purple "✨ SUCCESS! ✨ Import iterm.json into iTerm to finish."

@@ -121,6 +121,7 @@ It will also add development-related apps on your MacOS Dock & restart it.
 - [x] Add Lens install
 - [x] Add Notion install
 - [x] Add `git` install
+- [x] Avoid Dock duplicates
 
 `/kubernetes/`
 - [ ] Document
