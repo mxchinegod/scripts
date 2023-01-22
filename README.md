@@ -13,6 +13,8 @@ An engineering toolbox (just MacOS for now)
 1️⃣ I start with 
 [`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh) which installs:
 
+<center>
+
 | 📁 Software | ⚙ Purpose | Optional |
 | :-- | :-: | --: |
 | [brew](https://brew.sh) | Package Manager | ❌ |
@@ -28,6 +30,8 @@ An engineering toolbox (just MacOS for now)
 | [kubectl](https://kubernetes.io/docs/tasks/tools/) | Kubernetes CLI | ❌ |
 | [Lens](https://k8slens.dev) | Kubernetes GUI | ❌ |
 | [Notion](https://www.notion.so) | Note-taking | ✅ |
+
+</center>
 
 2️⃣ The directory includes a .json 📝 document for manually importing into iTerm2 settings which will set terminal colors 🎨, window appearance 🪞, and font 📚 for you.
 
