@@ -1,5 +1,12 @@
+![banner](banner.png)
+
+
+<center>
+
 # 📄 scripts!
-Engineering toolbox (just MacOS for now)
+
+An engineering toolbox (just MacOS for now)
+</center>
 
 ## ✨ Initialize
 
