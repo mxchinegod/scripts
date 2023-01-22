@@ -56,6 +56,11 @@ I start with
 <td style="text-align:right">❌</td>
 </tr>
 <tr>
+<td style="text-align:left"><a href="https://git-scm.com">git</a></td>
+<td style="text-align:center">Code Management</td>
+<td style="text-align:right">❌</td>
+</tr>
+<tr>
 <td style="text-align:left"><a href="https://www.raycast.com">raycast</a></td>
 <td style="text-align:center">Spotlight Replacement</td>
 <td style="text-align:right">❌</td>
