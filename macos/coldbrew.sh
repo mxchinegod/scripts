@@ -47,7 +47,7 @@ zsh () {
 omz () {
     if [[ -d "/Users/$USER/.oh-my-zsh" ]]
         then 
-            purple "✅ You already have Oh-My-Zsh. ✅"
+            purple "⛔️ You already have Oh-My-Zsh. ⛔️"
         else
             purple "📀 Installing Oh-My-Zsh 📀" 
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -57,39 +57,76 @@ omz () {
     iterm
 }
 
-# It's installing iTerm2.
+# It's checking if iTerm2 is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
 iterm () {
-    purple "📀 Installing iTerm2... 📀"
-    brew install iterm2
+    if [[ $(brew list --cask | grep "iterm2") ]]; then
+        purple "⛔️ iTerm2 is installed already ⛔️"
+    else
+        purple "📀 Installing iTerm2 📀"
+        brew install iterm2
+    fi
     theme
 }
 
 # It's installing the theme for iTerm2.
 theme () {
-    purple "📀 Installing theme... 📀"
-    brew install starship
-    echo "eval '$(starship init zsh)'" >> ~/.zshrc
-    brew tap homebrew/cask-fonts
-    brew install --cask font-hack-nerd-font
-    curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors'
-    open Snazzy.itermcolors
-    purple "🎨 Theme installed 🎨"
-    sleep 0.5
-    rm Snazzy.itermcolors
+    if which starship >/dev/null; then
+        purple "⛔️ starship theme is installed already ⛔️"
+    else
+        purple "📀 Installing theme... 📀"
+        brew install starship
+        echo "eval '$(starship init zsh)'" >> ~/.zshrc
+        purple "🎨 Theme installed 🎨"
+    fi
+    if [[ $(brew list --cask | grep "font-hack-nerd-font") ]]; then
+        purple "⛔️ Hack Nerd font is installed already ⛔️"
+    else
+        purple "📚 Installing font & iTerm colors 📚"
+        brew tap homebrew/cask-fonts
+        brew install --cask font-hack-nerd-font
+        curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors'
+        open Snazzy.itermcolors
+        sleep 0.5
+        rm Snazzy.itermcolors
+    fi
     raycast
 }
 
-# It's installing RayCast.
+# It's checking if Raycast is installed. If it is, it's going to print out that it's installed. If
+# it's not, it's going to install it.
 raycast () {
-    purple "🌞 Installing RayCast 🌞"
-    brew install --cask raycast
+    if [[ $(ls /Applications | grep "Raycast.app") ]]; then
+        purple "⛔️ Raycast is installed already ⛔️"
+    else
+        purple "🌞 Installing RayCast 🌞"
+        brew install --cask raycast
+    fi
     neofetch
 }
 
-# It's installing Neofetch.
+# It's checking if Neofetch is installed. If it is, it's going to print out that it's installed. If
+# it's
+# not, it's going to install it.
 neofetch () {
-    purple "🖥️ Installing Neofetch 🖥️"
-    brew install neofetch
+    if which neofetch >/dev/null; then
+        purple "⛔️ Neofetch is installed already ⛔️"
+    else
+        purple "🖥️ Installing Neofetch 🖥️"
+        brew install neofetch
+    fi
+    vscode
+}
+
+# It's checking if VSCode is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
+vscode () {
+    if [[ $(ls /Applications | grep "Visual Studio Code.app") ]]; then
+        purple "⛔️ VSCode is installed already ⛔️"
+    else
+        purple "🧑‍💻 Installing VSCode 🧑‍💻"
+        brew install --cask visual-studio-code
+    fi
     finish
 }
 
