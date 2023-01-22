@@ -12,11 +12,9 @@ An engineering toolbox (just MacOS for now)
 
 # 🚀 Usage
 
-## ✨ Initialize
+### ✨ Initialize
 
-### 1️⃣
-I start with 
-[`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh) which installs:
+#### 1️⃣ I start with [`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh) which installs:
 
 <table align="center">
 <thead>
@@ -102,17 +100,15 @@ I start with
 
 </p>
 
-### 2️⃣ 
-The directory includes a .json 📝 document for manually importing into iTerm2 settings which will set terminal colors 🎨, window appearance 🪞, and font 📚 for you.
+#### 2️⃣ The directory includes a .json 📝 document for manually importing into iTerm2 settings which will set terminal colors 🎨, window appearance 🪞, and font 📚 for you.
 
-### 3️⃣
-It will also add development-related apps on your MacOS Dock & restart it.
+#### 3️⃣ It will also add development-related apps on your MacOS Dock & restart it.
 
-<h3 align="center">
+<h5 align="center">
 Now it's time to check out what tools you have to enhance your workflow instantly❣️
 
 ⬇️
-</h3>
+</h5>
 
 # ⚙️ Tools
 
