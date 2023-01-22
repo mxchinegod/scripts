@@ -4,7 +4,7 @@ Engineering toolbox (just MacOS for now)
 ## ✨ Initialize
 
 1️⃣ I start with 
-[`/macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh)
+[`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh)
 
 which installs:
 
