@@ -33,7 +33,7 @@ start () {
 zsh () {
     if [ "$SHELL" = "/bin/zsh" ]
         then
-            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https:#ohmyz.sh) ✅"
+            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https://ohmyz.sh) ✅"
             omz
         else
             purple "⛔️ You're not using ZSH, going to fix that for you. ⛔️"
