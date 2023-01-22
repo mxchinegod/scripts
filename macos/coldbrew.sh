@@ -96,11 +96,11 @@ theme () {
 # It's checking if git is installed. If it is, it's going to print out that it's installed. If it's
 # not, it's going to install it.
 git () {
-    if ! [ -x "$(command -v git)" ]; then
+    if which git >/dev/null; then
+        purple "⛔️ git is installed already ⛔️"
+    else 
         purple "📀 Installing git... 📀"
         brew install git
-    else 
-        purple "⛔️ git is installed already ⛔️"
     fi
     raycast
 }
