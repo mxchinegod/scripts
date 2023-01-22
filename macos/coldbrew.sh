@@ -64,7 +64,7 @@ omz () {
 # not, it's going to install it.
 iterm () {
     if [[ $(brew list --cask | grep "iterm2") ]]; then
-        purple "⛔️ iTerm2 is installed already"
+        purple "⛔️ iTerm2 is already installed"
     else
         purple "📀 Installing iTerm2"
         brew install iterm2
@@ -75,7 +75,7 @@ iterm () {
 # It's installing the theme for iTerm2.
 theme () {
     if which starship >/dev/null; then
-        purple "⛔️ starship theme is installed already"
+        purple "⛔️ starship theme is already installed"
     else
         purple "📀 Installing theme..."
         brew install starship 
@@ -87,7 +87,7 @@ theme () {
         purple "🎨 Theme installed 🎨"
     fi
     if [[ $(brew list --cask | grep "font-hack-nerd-font") ]]; then
-        purple "⛔️ Hack Nerd font is installed already"
+        purple "⛔️ Hack Nerd font is already installed"
     else
         purple "📚 Installing font & iTerm colors"
         brew tap homebrew/cask-fonts
@@ -104,7 +104,7 @@ theme () {
 # not, it's going to install it.
 git () {
     if which git >/dev/null; then
-        purple "⛔️ git is installed already"
+        purple "⛔️ git is already installed"
     else 
         purple "📀 Installing git..."
         brew install git
@@ -116,7 +116,7 @@ git () {
 # it's not, it's going to install it.
 raycast () {
     if [[ $(ls /Applications | grep "Raycast.app") ]]; then
-        purple "⛔️ Raycast is installed already"
+        purple "⛔️ Raycast is already installed"
     else
         purple "🌞 Installing RayCast"
         brew install --cask raycast
@@ -129,7 +129,7 @@ raycast () {
 # not, it's going to install it.
 neofetch () {
     if which neofetch >/dev/null; then
-        purple "⛔️ Neofetch is installed already"
+        purple "⛔️ Neofetch is already installed"
     else
         purple "🖥️ Installing Neofetch"
         brew install neofetch
@@ -141,7 +141,7 @@ neofetch () {
 # not, it's going to install it.
 vscode () {
     if [[ $(ls /Applications | grep "Visual Studio Code.app") ]]; then
-        purple "⛔️ VSCode is installed already"
+        purple "⛔️ VSCode is already installed"
     else
         purple "🧑‍💻 Installing VSCode"
         brew install --cask visual-studio-code
