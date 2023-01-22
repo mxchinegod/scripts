@@ -78,7 +78,11 @@ theme () {
         purple "⛔️ starship theme is installed already ⛔️"
     else
         purple "📀 Installing theme... 📀"
-        brew install starship
+        brew install starship 
+    fi
+    if [[ $(cat $HOME/.zshrc | grep "eval '$(starship init zsh)'") ]]; then
+        purple "⛔️ starship theme is already set ⛔️"
+    else
         echo "eval '$(starship init zsh)'" >> ~/.zshrc
         purple "🎨 Theme installed 🎨"
     fi
