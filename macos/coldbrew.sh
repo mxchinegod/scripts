@@ -16,15 +16,15 @@ __dock_item() {
         # Add the app to the Dock
         defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/$2</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
     else
-        purple "⛔️ $1 already in the Dock ⛔️"
+        purple "⛔️ $1 already in the Dock"
     fi
 }
 
 # It's checking if you have Homebrew installed. If you don't, it's going to install it.
 start () {
-    command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now ⛔️"; \
+    command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now"; \
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
-        purple "✅ Adding brew to your PATH ✅"; \
+        purple "✅ Adding brew to your PATH"; \
         echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile; \
         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile; \
         eval "$(/opt/homebrew/bin/brew shellenv)"; }
@@ -36,10 +36,10 @@ start () {
 zsh () {
     if [ "$SHELL" = "/bin/zsh" ]
         then
-            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https://ohmyz.sh) ✅"
+            purple "✅ You're using ZSH, going to install Oh-My-Zsh (https://ohmyz.sh)"
             omz
         else
-            purple "⛔️ You're not using ZSH, going to fix that for you. ⛔️"
+            purple "⛔️ You're not using ZSH, going to fix that for you."
             brew install zsh
             zsh
     fi
@@ -50,11 +50,11 @@ zsh () {
 omz () {
     if [[ -d "/Users/$USER/.oh-my-zsh" ]]
         then 
-            purple "⛔️ You already have Oh-My-Zsh. ⛔️"
+            purple "⛔️ You already have Oh-My-Zsh."
         else
-            purple "📀 Installing Oh-My-Zsh 📀" 
+            purple "📀 Installing Oh-My-Zsh"
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-            purple "📡 Going to try to update Oh-My-Zsh for the first time 📡"
+            purple "📡 Going to try to update Oh-My-Zsh for the first time"
             omz update
     fi
     iterm
@@ -64,9 +64,9 @@ omz () {
 # not, it's going to install it.
 iterm () {
     if [[ $(brew list --cask | grep "iterm2") ]]; then
-        purple "⛔️ iTerm2 is installed already ⛔️"
+        purple "⛔️ iTerm2 is installed already"
     else
-        purple "📀 Installing iTerm2 📀"
+        purple "📀 Installing iTerm2"
         brew install iterm2
     fi
     theme
@@ -75,21 +75,21 @@ iterm () {
 # It's installing the theme for iTerm2.
 theme () {
     if which starship >/dev/null; then
-        purple "⛔️ starship theme is installed already ⛔️"
+        purple "⛔️ starship theme is installed already"
     else
-        purple "📀 Installing theme... 📀"
+        purple "📀 Installing theme..."
         brew install starship 
     fi
     if [[ $(cat $HOME/.zshrc | grep "eval '$(starship init zsh)'") ]]; then
-        purple "⛔️ starship theme is already set ⛔️"
+        purple "⛔️ starship theme is already set"
     else
         echo "eval '$(starship init zsh)'" >> ~/.zshrc
         purple "🎨 Theme installed 🎨"
     fi
     if [[ $(brew list --cask | grep "font-hack-nerd-font") ]]; then
-        purple "⛔️ Hack Nerd font is installed already ⛔️"
+        purple "⛔️ Hack Nerd font is installed already"
     else
-        purple "📚 Installing font & iTerm colors 📚"
+        purple "📚 Installing font & iTerm colors"
         brew tap homebrew/cask-fonts
         brew install --cask font-hack-nerd-font
         curl -k https://raw.githubusercontent.com/sindresorhus/iterm2-snazzy/main/Snazzy.itermcolors --output 'Snazzy.itermcolors'
@@ -104,9 +104,9 @@ theme () {
 # not, it's going to install it.
 git () {
     if which git >/dev/null; then
-        purple "⛔️ git is installed already ⛔️"
+        purple "⛔️ git is installed already"
     else 
-        purple "📀 Installing git... 📀"
+        purple "📀 Installing git..."
         brew install git
     fi
     raycast
@@ -116,9 +116,9 @@ git () {
 # it's not, it's going to install it.
 raycast () {
     if [[ $(ls /Applications | grep "Raycast.app") ]]; then
-        purple "⛔️ Raycast is installed already ⛔️"
+        purple "⛔️ Raycast is installed already"
     else
-        purple "🌞 Installing RayCast 🌞"
+        purple "🌞 Installing RayCast"
         brew install --cask raycast
     fi
     neofetch
@@ -129,9 +129,9 @@ raycast () {
 # not, it's going to install it.
 neofetch () {
     if which neofetch >/dev/null; then
-        purple "⛔️ Neofetch is installed already ⛔️"
+        purple "⛔️ Neofetch is installed already"
     else
-        purple "🖥️ Installing Neofetch 🖥️"
+        purple "🖥️ Installing Neofetch"
         brew install neofetch
     fi
     vscode
@@ -141,9 +141,9 @@ neofetch () {
 # not, it's going to install it.
 vscode () {
     if [[ $(ls /Applications | grep "Visual Studio Code.app") ]]; then
-        purple "⛔️ VSCode is installed already ⛔️"
+        purple "⛔️ VSCode is installed already"
     else
-        purple "🧑‍💻 Installing VSCode 🧑‍💻"
+        purple "🧑‍💻 Installing VSCode"
         brew install --cask visual-studio-code
     fi
     docker
@@ -153,9 +153,9 @@ vscode () {
 # not, it's going to install it.
 docker () {
     if which docker >/dev/null; then
-        purple '⛔️ Docker is already installed ⛔️'
+        purple "⛔️ Docker is already installed"
     else
-        purple '📀 Installing Docker 📀'
+        purple "📀 Installing Docker"
         brew cask install docker
     fi
     kubectl
@@ -165,9 +165,9 @@ docker () {
 # it's not, it's going to install it.
 kubectl () {
     if which kubectl >/dev/null; then
-        purple '⛔️ kubectl is already installed ⛔️'
+        purple "⛔️ kubectl is already installed"
     else
-        purple '📀 Installing kubectl 📀'
+        purple "📀 Installing kubectl"
         brew install kubectl
     fi
     lens
@@ -177,9 +177,9 @@ kubectl () {
 # not, it's going to install it.
 lens () {
     if [[ $(ls /Applications | grep "Lens.app") ]]; then
-        purple '⛔️ Lens is already installed ⛔️'
+        purple "⛔️ Lens is already installed"
     else
-        purple '📀 Installing Lens 📀'
+        purple "📀 Installing Lens"
         brew install --cask lens
     fi
     notion
@@ -190,15 +190,15 @@ lens () {
 # you say no, it's going to cancel the installation.
 notion () {
     if open -a "Notion.app" --hide; then
-        purple "⛔️ Notion is already installed ⛔️"
+        purple "⛔️ Notion is already installed"
     else
         purple "🙋 Would you like to install excellent note-taking app, Notion❓ (y/n)"
         read -r response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
-            purple "📀 Installing Notion 📀"
+            purple "📀 Installing Notion"
             brew cask install notion
         else
-            purple "⛔️ Notion installation cancelled ⛔️"
+            purple "⛔️ Notion installation cancelled"
         fi
     fi
     finish
@@ -211,10 +211,10 @@ finish () {
     __dock_item "Docker" "Docker.app"
     __dock_item "Lens" "Lens.app"
     __dock_item "Notion" "Notion.app"
-    purple "🧑‍💻 Restarting Dock 🧑‍💻"
+    purple "🧑‍💻 Restarting Dock"
     killall Dock
-    purple "✨ SUCCESS! ✨ Import iterm.json into iTerm to finish."
-    purple "📄 OPTIONAL STEP 📄 change VSCode terminal font to 'Hack Nerd Font Mono'"
+    purple "✨ SUCCESS! ➡️ Import iterm.json into iTerm to finish."
+    purple "📄 OPTIONAL STEP ➡️ change VSCode terminal font to 'Hack Nerd Font Mono'"
 }
 
 start
