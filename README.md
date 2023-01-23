@@ -128,7 +128,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 
 <h3 id="-kubernetes-"><code>finance/</code></h3>
 <p align="center">
-    🖨️ <a href="https://github.com/DylanAlloy/scripts/blob/main/finance/pdf.sh"><code>pdf.sh</code></a>
+    🗂️ <a href="https://github.com/DylanAlloy/scripts/blob/main/finance/pdf.sh"><code>pdf.sh</code></a>
         <code align="center">['fed' or a URL]</code>
 </p>
 <p align="center"><sub>scrapes all PDF links from a webpage</sub></p>
