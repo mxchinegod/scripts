@@ -19,6 +19,6 @@ if [ "$1" == "-h" ]; then
   exit 0
 else
   purple "🗂️ Copying of "$PATH" from "$POD" in "$NAMESPACE" commenced \n$"
-  kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE
+  echo "kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE"
   purple "\n✅ Copy was successful."
 fi
