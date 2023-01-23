@@ -33,27 +33,4 @@ get_table () {
     rm calendar.html
 }
 
-table_ascii () {
-
-    # Get the input HTML file
-    html_file=$1
-
-    # Extract the table rows
-    rows=$(grep -o "<tr.*</tr>" $html_file)
-
-    # Process each row
-    for row in $rows; do
-        # Extract the columns
-        columns=$(grep -o "<td.*</td>" <<< $row)
-        # Process each column
-        for column in $columns; do
-            # Extract the text
-            text=$(grep -o ">.*<" <<< $column | sed 's/<[^>]*>//g')
-            # Output the text padded with spaces
-            printf "%-15s" "$text"
-        done
-        echo ""
-    done
-}
-
 get_table $1
