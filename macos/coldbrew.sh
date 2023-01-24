@@ -28,6 +28,7 @@ start () {
         echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile; \
         echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile; \
         eval "$(/opt/homebrew/bin/brew shellenv)"; }
+        echo 'source <(kubectl completion zsh)' >> /Users/$USER/.zshrc
     zsh
 }
 
@@ -202,7 +203,16 @@ notion () {
             purple "⛔️ Notion installation cancelled"
         fi
     fi
-    finish
+    helm
+}
+
+helm () {
+    purple "💿 Installing Helm!"
+    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    chmod 700 get_helm.sh
+    ./get_helm.sh
+    purple "✅ Helm installed!"
+    rm ./get_helm.sh
 }
 
 # It's adding iTerm to the dock.

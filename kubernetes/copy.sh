@@ -18,7 +18,7 @@ if [ "$1" == "-h" ]; then
   purple "🛟 copy.sh [config] [namespace] [remote path] [local file] [pod]"
   exit 0
 else
-  purple "🗂️ Copying of "$PATH" from "$POD" in "$NAMESPACE" commenced \n$"
-  echo "kubectl --kubeconfig $CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE"
-  purple "\n✅ Copy was successful."
+  purple "🖨 Copying of $PATH from $POD in $NAMESPACE commenced"
+  kubectl --kubeconfig ~/.kube/$CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE
+  purple "✅ Copy was successful."
 fi
