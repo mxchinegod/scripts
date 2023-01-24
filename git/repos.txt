@@ -1,1 +1,4 @@
 https://github.com/jerryjliu/gpt_index.git
+https://github.com/bellingcat/octosuite.git
+https://github.com/google-research/tuning_playbook.git
+https://github.com/f/awesome-chatgpt-prompts.gits

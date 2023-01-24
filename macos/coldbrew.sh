@@ -31,6 +31,7 @@ start () {
     zsh
 }
 
+
 # It's checking if you're using ZSH. If you are, it's going to install Oh-My-Zsh. If you're not, it's
 # going to install ZSH and then Oh-My-Zsh.
 zsh () {
