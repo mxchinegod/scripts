@@ -18,10 +18,10 @@ fi
 
 # Read the file and clone each repository
 while read repo; do
-    git clone "$repo" $(echo ~)$1/$(basename $repo) 2> /dev/null
+    git clone "$repo" $(echo ~)/$1/$(basename $repo) 2> /dev/null
     if [ $? -ne 0 ]; then
-        purple "🚨 Failed to clone into $(echo ~)$1/$(basename $repo)"
+        purple "🚨 Failed to clone into $(echo ~)/$1/$(basename $repo)"
     else
-        purple "✅ Successfully cloned into $(echo ~)$1/$(basename $repo)"
+        purple "✅ Successfully cloned into $(echo ~)/$1/$(basename $repo)"
     fi
 done < "$repos_file"
