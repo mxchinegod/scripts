@@ -206,13 +206,30 @@ notion () {
     helm
 }
 
+# It's checking if Helm is installed. If it is, it's going to print out that it's installed. If it's
+# not, it's going to install it.
 helm () {
-    purple "💿 Installing Helm!"
-    curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-    chmod 700 get_helm.sh
-    ./get_helm.sh
-    purple "✅ Helm installed!"
-    rm ./get_helm.sh
+    if which helm >/dev/null; then
+        purple "⛔️ Helm is already installed"
+    else
+        purple "💿 Installing Helm!"
+        brew install helm
+        purple "✅ Helm installed!"
+    fi
+    precommit
+}
+
+# It's checking if pre-commit is installed. If it is, it's going to print out that it's installed. If
+# it's not, it's going to install it.
+precommit () {
+    if which pre-commit >/dev/null; then
+        purple "⛔️ pre-commit is already installed"
+    else
+        purple "💿 Installing pre-commit!"
+        brew install pre-commit
+        purple "✅ pre-commit installed!"
+    fi
+    finish
 }
 
 # It's adding iTerm to the dock.

@@ -95,6 +95,16 @@ An engineering toolbox (just MacOS for now)
 <td style="text-align:center">Note-taking</td>
 <td style="text-align:center">✅</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="https://helm.sh">helm</a></td>
+<td style="text-align:center">Kubernetes Chart manager</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://pre-commit.com">pre-commit</a></td>
+<td style="text-align:center">pre-commit hook manager</td>
+<td style="text-align:center">❌</td>
+</tr>
 </tbody>
 </table>
 
@@ -146,6 +156,8 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 - [x] Add Notion install
 - [x] Add `git` install
 - [x] Avoid Dock duplicates
+- [x] Add `helm`
+- [x] Add `pre-commit`
 
 `kubernetes/`
 - [x] Document
