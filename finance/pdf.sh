@@ -14,7 +14,6 @@ if [ "$1" == "-h" ]; then
   exit 0
 fi
 
-
 get_table () {
     case $1 in
         'fed' | 'reserve' | 'Reserve')

@@ -51,7 +51,7 @@ zsh () {
 # going to install ZSH and then Oh-My-Zsh.
 omz () {
     if [[ -d "/Users/$USER/.oh-my-zsh" ]]
-        then 
+        then
             purple "⛔️ You already have Oh-My-Zsh."
         else
             purple "📀 Installing Oh-My-Zsh"
@@ -80,7 +80,7 @@ theme () {
         purple "⛔️ starship theme is already installed"
     else
         purple "📀 Installing theme..."
-        brew install starship 
+        brew install starship
     fi
     if [[ $(cat $HOME/.zshrc | grep "eval '$(starship init zsh)'") ]]; then
         purple "⛔️ starship theme is already set"
@@ -107,7 +107,7 @@ theme () {
 git () {
     if which git >/dev/null; then
         purple "⛔️ git is already installed"
-    else 
+    else
         purple "📀 Installing git..."
         brew install git
     fi
