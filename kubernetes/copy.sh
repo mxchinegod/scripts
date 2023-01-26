@@ -22,3 +22,4 @@ else
   kubectl --kubeconfig ~/.kube/$CONFIG --insecure-skip-tls-verify -n $NAMESPACE cp $POD:$PATH $FILE
   purple "✅ Copy was successful."
 fi
+
