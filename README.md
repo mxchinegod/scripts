@@ -10,7 +10,7 @@
 An engineering toolbox (just MacOS for now)
 </p>
 
-# 🚀 Usage
+# ✨ Usage
 
 ### ✨ Initialize
 
