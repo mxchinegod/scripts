@@ -12,7 +12,7 @@ An engineering toolbox (just MacOS for now)
 
 # ✨ Usage
 
-### ✨ Initialize
+### 🚀 Initialize
 
 #### 1️⃣ I start with [`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh) which installs:
 
