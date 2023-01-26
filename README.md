@@ -143,7 +143,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 </p>
 <p align="center"><sub>scrapes all PDF links from a webpage</sub></p>
 
-# 🚀 Contributing 
+# 🙋 Contributing 
 
 ##### Proper commit message format is required for automated changelog generation. Examples:
 
