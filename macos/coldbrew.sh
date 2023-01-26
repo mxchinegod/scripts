@@ -54,7 +54,7 @@ omz () {
         then
             purple "⛔️ You already have Oh-My-Zsh."
         else
-            purple "📀 Installing Oh-My-Zsh"
+            purple "💿 Installing Oh-My-Zsh"
             sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
             purple "📡 Going to try to update Oh-My-Zsh for the first time"
             omz update
@@ -68,7 +68,7 @@ iterm () {
     if [[ $(brew list --cask | grep "iterm2") ]]; then
         purple "⛔️ iTerm2 is already installed"
     else
-        purple "📀 Installing iTerm2"
+        purple "💿 Installing iTerm2"
         brew install iterm2
     fi
     theme
@@ -79,7 +79,7 @@ theme () {
     if which starship >/dev/null; then
         purple "⛔️ starship theme is already installed"
     else
-        purple "📀 Installing theme..."
+        purple "💿 Installing theme..."
         brew install starship
     fi
     if [[ $(cat $HOME/.zshrc | grep "eval '$(starship init zsh)'") ]]; then
@@ -108,7 +108,7 @@ git () {
     if which git >/dev/null; then
         purple "⛔️ git is already installed"
     else
-        purple "📀 Installing git..."
+        purple "💿 Installing git..."
         brew install git
     fi
     raycast
@@ -157,7 +157,7 @@ docker () {
     if which docker >/dev/null; then
         purple "⛔️ Docker is already installed"
     else
-        purple "📀 Installing Docker"
+        purple "💿 Installing Docker"
         brew cask install docker
     fi
     kubectl
@@ -169,7 +169,7 @@ kubectl () {
     if which kubectl >/dev/null; then
         purple "⛔️ kubectl is already installed"
     else
-        purple "📀 Installing kubectl"
+        purple "💿 Installing kubectl"
         brew install kubectl
     fi
     lens
@@ -181,7 +181,7 @@ lens () {
     if [[ $(ls /Applications | grep "Lens.app") ]]; then
         purple "⛔️ Lens is already installed"
     else
-        purple "📀 Installing Lens"
+        purple "💿 Installing Lens"
         brew install --cask lens
     fi
     notion
@@ -197,7 +197,7 @@ notion () {
         purple "🙋 Would you like to install excellent note-taking app, Notion❓ (y/n)"
         read -r response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
-            purple "📀 Installing Notion"
+            purple "💿 Installing Notion"
             brew cask install notion
         else
             purple "⛔️ Notion installation cancelled"
@@ -228,6 +228,25 @@ precommit () {
         purple "💿 Installing pre-commit!"
         brew install pre-commit
         purple "✅ pre-commit installed!"
+    fi
+    kompose
+}
+
+# It's checking if kompose is installed. If it is, it's going to print out that it's installed. If
+# it's not, it's going to install it.
+kompose () {
+    if which kompose >/dev/null; then
+        purple "⛔️ kompose is already installed"
+    else
+        purple "🙋 Would you like to install docker->k8s conversion tool, kompose❓ (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "💿 Installing kompose"
+            brew install kompose
+            purple "✅ kompose installed!"
+        else
+            purple "⛔️ kompose installation cancelled"
+        fi
     fi
     finish
 }

@@ -105,6 +105,11 @@ An engineering toolbox (just MacOS for now)
 <td style="text-align:center">pre-commit hook manager</td>
 <td style="text-align:center">❌</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="https://kompose.io">kompose</a></td>
+<td style="text-align:center">docker to kubernetes conversion tool</td>
+<td style="text-align:center">✅</td>
+</tr>
 </tbody>
 </table>
 
