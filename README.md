@@ -140,6 +140,11 @@ Now it's time to check out what tools you have to enhance your workflow instantl
         <code align="center">[subfolder in ~] [repos.txt location]</code>
 </p>
 <p align="center"><sub>mass clone</sub></p>
+<p align="center">
+    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.sh"><code>perfectionist.sh</code></a>
+    <code align="center">[git project directory]</code>
+</p>
+<p align="center"><sub>auto-configure pre-commit and your git hooks using <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.txt"><code>perfectionist.txt</code></a></sub></p>
 
 <h3 id="-kubernetes-"><code>finance/</code></h3>
 <p align="center">
@@ -148,7 +153,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 </p>
 <p align="center"><sub>scrapes all PDF links from a webpage</sub></p>
 
-# 🙋 Contributing 
+# 🙋 Contributing
 
 ##### Proper commit message format is required for automated changelog generation. Examples:
 
