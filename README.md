@@ -1,6 +1,5 @@
 ![banner](banner.png)
 
-
 <h1 align="center">
 
 📄 scripts!
@@ -123,6 +122,7 @@ An engineering toolbox (just MacOS for now)
 Now it's time to check out what tools you have to enhance your workflow instantly❣️
 
 ⬇️
+
 </h5>
 
 # ⚙️ Tools
@@ -152,6 +152,11 @@ Now it's time to check out what tools you have to enhance your workflow instantl
         <code align="center">['fed' or a URL]</code>
 </p>
 <p align="center"><sub>scrapes all PDF links from a webpage</sub></p>
+<h3 id="-design-"><code>design/</code></h3>
+<p align="center">
+    🏁 <a href="https://github.com/DylanAlloy/scripts/blob/main/design/spinners.sh"><code>spinners.sh</code></a>
+</p>
+<p align="center"><sub>demonstrates animated spinners</sub></p>
 
 # 🙋 Contributing
 
@@ -171,9 +176,11 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 # ✅ To-Do
 
 `README.md`
+
 - [ ] Explain tools & scripts philosophy beyond installer
 
 `macos/coldbrew.sh`
+
 - [x] Add Docker Desktop install
 - [x] Add `kubectl` install
 - [x] Add Lens install
@@ -184,5 +191,6 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 - [x] Add `pre-commit`
 
 `kubernetes/`
+
 - [x] Document
 - [ ] Protocolize
