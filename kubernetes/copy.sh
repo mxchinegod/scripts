@@ -16,6 +16,7 @@ POD=$5
 # This is a shell script that is used to copy files from a pod to the local machine.
 if [ "$1" == "-h" ]; then
   purple "🛟 copy.sh [config] [namespace] [remote path] [local file] [pod]"
+  purple "💬 short circuit to an oft-needed k8s command"
   exit 0
 else
   purple "🖨 Copying of $PATH from $POD in $NAMESPACE commenced"

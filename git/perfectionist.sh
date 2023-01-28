@@ -8,7 +8,9 @@ purple() {
 }
 
 if [ "$1" == "-h" ]; then
-    purple "🛟 perfectionist.sh [git project directory]"
+    purple "🛟 perfectionist.sh"
+    purple "💬 loads a pre-commit config from URL from first line of script's local perfectionist.txt"
+    purple "💬 then uses remaining URLs in the file to populate .git/hooks folder"
     exit 0
 else
     SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )

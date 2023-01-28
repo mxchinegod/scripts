@@ -10,7 +10,8 @@ purple () {
 
 # It's checking if the first argument is -h. If it is, it prints out the help message and exits.
 if [ "$1" == "-h" ]; then
-  purple "🛟 pdf.sh (-h) ['fed' or a URL] : scrapes all PDF links from a webpage"
+  purple "🛟 pdf.sh (-h) ['fed' or a URL]"
+  purple "💬 loads all PDF links from a URL or Federal Reserve Website"
   exit 0
 fi
 
