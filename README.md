@@ -137,7 +137,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 <h3 id="-git-"><code>git/</code></h3>
 <p align="center">
     🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/whatarmy.sh"><code>whatarmy.sh</code></a>
-        <code align="center">[subfolder in ~] [repos.txt location]</code>
+        <code align="center">[clone path] [repos.txt location]</code>
 </p>
 <p align="center"><sub>mass clone</sub></p>
 <p align="center">

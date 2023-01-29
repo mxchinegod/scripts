@@ -9,7 +9,7 @@ purple() {
 
 # It's checking if the first argument is -h. If it is, it prints out the help message and exits.
 if [ "$1" == "-h" ]; then
-    purple "🛟 whatarmy.sh (-h) [subfolder in ~] [repos.txt location]"
+    purple "🛟 whatarmy.sh (-h) [clone path] [repos.txt location]"
     purple "💬 clones infinite git repositories"
     exit 0
 fi
@@ -19,10 +19,10 @@ fi
 
 # Read the file and clone each repository
 while read repo; do
-    git clone "$repo" $(echo ~)/$1/$(basename $repo) 2>/dev/null
+    git clone "$repo" $1/$(basename $repo) 2>/dev/null
     if [ $? -ne 0 ]; then
-        purple "🚨 Failed to clone into $(echo ~)/$1/$(basename $repo)"
+        purple "🚨 Failed to clone into $1/$(basename $repo)"
     else
-        purple "✅ Successfully cloned into $(echo ~)/$1/$(basename $repo)"
+        purple "✅ Successfully cloned into $1/$(basename $repo)"
     fi
 done <"$repos_file"
