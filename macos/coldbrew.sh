@@ -25,10 +25,14 @@ start () {
     command -v brew >/dev/null 2>&1 || { purple "⛔️ You don't yet have Homebrew, installing now"; \
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
         purple "✅ Adding brew to your PATH"; \
-        echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/$USER/.zprofile; \
-        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/$USER/.zprofile; \
+        echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $HOME/.zprofile; \
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile; \
         eval "$(/opt/homebrew/bin/brew shellenv)"; }
-        echo 'source <(kubectl completion zsh)' >> /Users/$USER/.zshrc
+        if [[ $(cat $HOME/.zshrc | grep "source <(kubectl completion zsh)") ]]; then
+            purple "⛔️ kubectl completion already configured"
+        else
+            echo 'source <(kubectl completion zsh)' >> $HOME/.zshrc
+        fi
     zsh
 }
 
@@ -50,7 +54,7 @@ zsh () {
 # It's checking if you're using ZSH. If you are, it's going to install Oh-My-Zsh. If you're not, it's
 # going to install ZSH and then Oh-My-Zsh.
 omz () {
-    if [[ -d "/Users/$USER/.oh-my-zsh" ]]
+    if [[ -d "$HOME/.oh-my-zsh" ]]
         then
             purple "⛔️ You already have Oh-My-Zsh."
         else
@@ -251,6 +255,25 @@ kompose () {
     finish
 }
 
+path () {
+    purple "😌 What zsh alias would you like to assign to your scripts folder? (a name/shortcut): "
+    read -r variable
+    if [ ${#variable} -le 1 ]; then
+        purple "⛔️ Too short!"
+        path
+    else
+        CURRENT="$variable=$PWD/"
+        if [[ !$(cat $HOME/.zshrc | grep "export $CURRENT") ]]; then
+            purple "⛔️ Already added to your zsh aliases!?"
+        else
+            echo "" >> $HOME/.zshrc
+            echo "# Custom scripts path | https://github.com/DylanAlloy/scripts" >> $HOME/.zshrc
+            echo "export $CURRENT" >> $HOME/.zshrc
+            purple "✅ Added to $HOME/.zshrc with 'export $CURRENT'"
+        fi
+    fi
+}
+
 # It's adding iTerm to the dock.
 finish () {
     __dock_item "iTerm" "iTerm.app"
@@ -258,6 +281,7 @@ finish () {
     __dock_item "Docker" "Docker.app"
     __dock_item "Lens" "Lens.app"
     __dock_item "Notion" "Notion.app"
+    path
     purple "🧑‍💻 Restarting Dock"
     killall Dock
     purple "✨ SUCCESS! ➡️ Import iterm.json into iTerm to finish."
