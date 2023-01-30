@@ -116,6 +116,8 @@ An engineering toolbox (just MacOS for now)
 
 #### 2️⃣ The directory includes a .json 📝 document for manually importing into iTerm2 settings which will set terminal colors 🎨, window appearance 🪞, and font 📚 for you.
 
+<br/>
+
 #### 3️⃣ It will also add development-related apps on your MacOS Dock & restart it.
 
 <h5 align="center">
@@ -126,6 +128,13 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 </h5>
 
 # ⚙️ Tools
+
+<h3 id="-macos-"><code>macos/</code></h3>
+<p align="center">
+    ⚡️ <a href="https://github.com/DylanAlloy/scripts/blob/main/macos/wasm.sh"><code>wasm.sh</code></a>
+        <code align="center">[]</code>
+</p>
+<p align="center"><sub>installs Emscripten for C++ → wasm compilation & makes sure cmake is available</sub></p>
 
 <h3 id="-kubernetes-"><code>kubernetes/</code></h3>
 <p align="center">
@@ -155,6 +164,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 <h3 id="-design-"><code>design/</code></h3>
 <p align="center">
     🏁 <a href="https://github.com/DylanAlloy/scripts/blob/main/design/spinners.sh"><code>spinners.sh</code></a>
+     <code align="center">[]</code>
 </p>
 <p align="center"><sub>demonstrates animated spinners</sub></p>
 
