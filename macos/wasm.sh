@@ -12,6 +12,8 @@ emscripten () {
         purple "⛔️ emsdk looks to have been cloned already, replace❓ [y/n]:"
         read -r response
         if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            rm -r emsdk
+            purple "🗑️ deleted old emsdk folder"
             purple "⏬ Cloning emscripten"
             git clone https://github.com/emscripten-core/emsdk.git >/dev/null
             cd emsdk
