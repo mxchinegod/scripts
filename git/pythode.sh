@@ -12,22 +12,22 @@ if [ "$1" == "-h" ]; then
     purple "💬 checks a directory for python & node installation instructions, then installs them"
     exit 0
 else
-for d in */ ; do
-  if [ -d "$d/.git" ]; then
-    if [ -f "$d/requirements.txt" ]; then
-      purple "✅ Found python project: $d"
-      purple "💿 Installing dependencies with pip..."
-      cd "$d"
-      pip install -r requirements.txt
-      cd ..
-    elif [ -f "$d/package.json" ]; then
-      purple "✅ Found node project: $d"
-      purple "💿 Installing dependencies with npm..."
-      cd "$d"
-      npm i
-      cd ..
-    fi
-    purple "⛔️ No python or node projects found"
-  fi
-  purple "⛔️ No git repositories found"
-done
+    for d in */; do
+        if [ -d "$d/.git" ]; then
+            if [ -f "$d/requirements.txt" ]; then
+                purple "✅ Found python project: $d"
+                purple "💿 Installing dependencies with pip..."
+                cd "$d"
+                pip install -r requirements.txt >/dev/null;
+                cd ..
+            elif [ -f "$d/package.json" ]; then
+                purple "✅ Found node project: $d"
+                purple "💿 Installing dependencies with npm..."
+                cd "$d"
+                npm i >/dev/null;
+                cd ..
+            fi
+            purple "⛔️ No python or node projects found"
+        fi
+    done
+fi
