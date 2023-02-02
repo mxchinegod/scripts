@@ -151,9 +151,14 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 <p align="center"><sub>mass clone</sub></p>
 <p align="center">
     🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.sh"><code>perfectionist.sh</code></a>
-    <code align="center">[git project directory]</code>
+    <code align="center">[]</code>
 </p>
 <p align="center"><sub>auto-configure pre-commit and your git hooks using <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.txt"><code>perfectionist.txt</code></a></sub></p>
+<p align="center">
+    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/pythode.sh"><code>pythode.sh</code></a>
+    <code align="center">[]</code>
+</p>
+<p align="center"><sub>detect subfolders in the current directory & installs python/node dependencies automagically</sub></p>
 
 <h3 id="-kubernetes-"><code>finance/</code></h3>
 <p align="center">
