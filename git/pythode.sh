@@ -29,5 +29,5 @@ for d in */ ; do
     fi
     purple "⛔️ No python or node projects found"
   fi
-  "⛔️ No git repositories found"
+  purple "⛔️ No git repositories found"
 done
