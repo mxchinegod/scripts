@@ -27,7 +27,9 @@ else
                 npm i >/dev/null;
                 cd ..
             fi
+        else
             purple "⛔️ No python or node projects found"
         fi
     done
+    purple "✅ Done."
 fi
