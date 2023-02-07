@@ -47,6 +47,11 @@ zsh () {
         else
             purple "⛔️ You're not using ZSH, going to fix that for you."
             brew install zsh
+            if [[ $(cat $HOME/.zshrc | grep "PROMPT_EOL_MARK=''") ]]; then
+               continue
+            else
+                echo PROMPT_EOL_MARK='' > ~/.zshrc
+            fi
             zsh
     fi
 }
