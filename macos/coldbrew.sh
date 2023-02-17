@@ -268,7 +268,7 @@ path () {
         path
     else
         CURRENT="$variable=$PWD/"
-        if [[ !$(cat $HOME/.zshrc | grep "export $CURRENT") ]]; then
+        if [[ $(cat $HOME/.zshrc | grep "export $CURRENT") ]]; then
             purple "⛔️ Already added to your zsh aliases!?"
         else
             echo "" >> $HOME/.zshrc
