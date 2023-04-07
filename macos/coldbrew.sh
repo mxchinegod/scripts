@@ -257,6 +257,23 @@ kompose () {
             purple "⛔️ kompose installation cancelled"
         fi
     fi
+    btop
+}
+
+btop () {
+    if which btop >/dev/null; then
+        purple "⛔️ btop is already installed"
+    else
+        purple "🙋 Would you like to install process monitor, btop (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "💿 Installing btop"
+            brew install btop
+            purple "✅ btop installed!"
+        else
+            purple "⛔️ btop installation cancelled"
+        fi
+    fi
     finish
 }
 
