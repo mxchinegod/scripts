@@ -141,6 +141,15 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 </p>
 <p align="center"><sub>installs Emscripten for C++ → wasm compilation & makes sure cmake is available</sub></p>
 
+
+<h3 id="-macos-"><code>sys/</code></h3>
+<p align="center">
+    📊 <a href="https://github.com/DylanAlloy/scripts/blob/main/sys/gpu_mingraph.sh"><code>gpu_mingraph.sh</code></a>
+        <code align="center">["tiny"]</code>
+</p>
+<p align="center"><sub>100% native and low-memory terminal graphs for GPU util %, "tiny" as argument will make it even lower footprint</sub></p>
+
+
 <h3 id="-kubernetes-"><code>kubernetes/</code></h3>
 <p align="center">
     🖨️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
