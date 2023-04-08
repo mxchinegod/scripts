@@ -50,6 +50,18 @@ if [[ "$1" == "tiny" ]]; then
         sleep 1
     done
 else
+    #!/bin/bash
+
+    # Define the maximum utilization value (100%)
+    max_utilization=100
+
+    # Define the length of the x-axis (number of data points to display)
+    x_length=50
+
+    # Define the range of the y-axis
+    y_max=100
+    y_min=0
+
     # Initialize the data array
     declare -a data
 
@@ -74,18 +86,18 @@ else
         printf "GPU Utilization\n"
 
         # Print the y-axis labels
-        for y in $(seq $y_max -10 $y_min); do
+        for ((y = y_max; y >= y_min; y -= 10)); do
             printf "%3d | " $y
             for ((i = 0; i < 10; i++)); do
                 index=$((${#data[@]} - 1 - $i))
                 if [ $index -ge 0 ] && (($(echo "${data[$index]} >= $y" | bc -l))); then
                     if (($(echo "${data[$index]} >= 80" | bc -l))); then
-                        printf "\e[31m\u2588\e[0m"
+                        printf "\e[31m\u2588\e[0m\u2800\u2800"
                     else
-                        printf "\e[32m\u2588\e[0m"
+                        printf "\e[32m\u2588\e[0m\u2800\u2800"
                     fi
                 else
-                    printf " "
+                    printf "\u2800\u2800\u2800"
                 fi
             done
             printf "\n"
@@ -94,20 +106,17 @@ else
         # Print the x-axis labels
         printf "    +"
         for ((i = 0; i < 10; i++)); do
-            printf "-"
+            printf " - "
         done
         printf ">\n     "
 
         for ((i = 0; i < 10; i++)); do
             index=$((${#data[@]} - 1 - $i))
-            if (($index % 10 == 0)); then
-                printf "%-3d" $index
-            else
-                printf "   "
-            fi
+            printf "%-3d" $index
         done
 
         # Wait for 1 second before updating the plot
         sleep 1
     done
+
 fi
