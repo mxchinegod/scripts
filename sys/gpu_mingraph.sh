@@ -110,11 +110,6 @@ else
         done
         printf ">\n     "
 
-        for ((i = 0; i < 10; i++)); do
-            index=$((${#data[@]} - 1 - $i))
-            printf "%-3d" $index
-        done
-
         # Wait for 1 second before updating the plot
         sleep 1
     done
