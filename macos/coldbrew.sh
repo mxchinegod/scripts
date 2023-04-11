@@ -274,6 +274,23 @@ btop () {
             purple "⛔️ btop installation cancelled"
         fi
     fi
+    w3m
+}
+
+w3m () {
+    if which w3m >/dev/null; then
+        purple "⛔️ w3m is already installed"
+    else
+        purple "🙋 Would you like to install terminal-based web browser, w3m (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "💿 Installing w3m"
+            brew install w3m
+            purple "✅ w3m installed!"
+        else
+            purple "⛔️ w3m installation cancelled"
+        fi
+    fi
     finish
 }
 
