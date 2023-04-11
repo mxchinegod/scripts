@@ -291,6 +291,41 @@ w3m () {
             purple "⛔️ w3m installation cancelled"
         fi
     fi
+    terraform
+}
+
+terraform () {
+    if which terraform >/dev/null; then
+        purple "⛔️ terraform is already installed"
+    else
+        purple "🙋 Would you like to install infrastructure-as-code tool, terraform (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "💿 Installing terraform"
+            brew tap hashicorp/tap
+            brew install hashicorp/tap/terraform
+            purple "✅ terraform installed!"
+        else
+            purple "⛔️ terraform installation cancelled"
+        fi
+    fi
+    azure
+}
+
+azure () {
+    if which az >/dev/null; then
+        purple "⛔️ azure-cli is already installed"
+    else
+        purple "🙋 Would you like to install azure-cli (y/n)"
+        read -r response
+        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
+            purple "💿 Installing azure-cli"
+            brew install azure-cli
+            purple "✅ azure-cli installed!"
+        else
+            purple "⛔️ azure-cli installation cancelled"
+        fi
+    fi
     finish
 }
 

@@ -119,6 +119,16 @@ An engineering toolbox (just MacOS for now)
 <td style="text-align:center">terminal-based web browser</td>
 <td style="text-align:center">✅</td>
 </tr>
+<tr>
+<td style="text-align:left"><a href="https://learn.microsoft.com/en-us/cli/azure/">azure-cli</a></td>
+<td style="text-align:center">Azure. CLI.</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.terraform.io">terraform</a></td>
+<td style="text-align:center">infrastructure-as-code</td>
+<td style="text-align:center">✅</td>
+</tr>
 </tbody>
 </table>
 
