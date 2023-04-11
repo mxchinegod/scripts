@@ -112,7 +112,7 @@ An engineering toolbox (just MacOS for now)
 <tr>
 <td style="text-align:left"><a href="https://github.com/aristocratos/btop">btop</a></td>
 <td style="text-align:center">resource monitoring at CLI</td>
-<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
 </tr>
 </tbody>
 </table>
