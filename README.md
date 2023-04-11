@@ -216,6 +216,7 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 
 `macos/coldbrew.sh`
 
+- [ ] Organize by type of install
 - [x] Add Docker Desktop install
 - [x] Add `kubectl` install
 - [x] Add Lens install
