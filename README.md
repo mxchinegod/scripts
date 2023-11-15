@@ -90,11 +90,6 @@ An engineering toolbox (just MacOS for now)
 <td style="text-align:center">❌</td>
 </tr>
 <tr>
-<td style="text-align:left"><a href="https://www.notion.so">Notion</a></td>
-<td style="text-align:center">Note-taking</td>
-<td style="text-align:center">✅</td>
-</tr>
-<tr>
 <td style="text-align:left"><a href="https://helm.sh">helm</a></td>
 <td style="text-align:center">Kubernetes Chart manager</td>
 <td style="text-align:center">❌</td>
@@ -220,7 +215,6 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 - [x] Add Docker Desktop install
 - [x] Add `kubectl` install
 - [x] Add Lens install
-- [x] Add Notion install
 - [x] Add `git` install
 - [x] Avoid Dock duplicates
 - [x] Add `helm`

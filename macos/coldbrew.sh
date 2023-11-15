@@ -193,25 +193,6 @@ lens () {
         purple "💿 Installing Lens"
         brew install --cask lens
     fi
-    notion
-}
-
-# It's checking if Notion is installed. If it is, it's going to print out that it's installed. If it's
-# not, it's going to ask you if you want to install it. If you say yes, it's going to install it. If
-# you say no, it's going to cancel the installation.
-notion () {
-    if open -a "Notion.app" --hide; then
-        purple "⛔️ Notion is already installed"
-    else
-        purple "🙋 Would you like to install excellent note-taking app, Notion❓ (y/n)"
-        read -r response
-        if [[ "$response" =~ ^([yY][eE][sS]|[yY])+$ ]]; then
-            purple "💿 Installing Notion"
-            brew cask install notion
-        else
-            purple "⛔️ Notion installation cancelled"
-        fi
-    fi
     helm
 }
 
@@ -354,7 +335,6 @@ finish () {
     __dock_item "Visual Studio Code" "Visual Studio Code.app"
     __dock_item "Docker" "Docker.app"
     __dock_item "Lens" "Lens.app"
-    __dock_item "Notion" "Notion.app"
     path
     purple "🧑‍💻 Restarting Dock"
     killall Dock
