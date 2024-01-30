@@ -1,2 +1,2 @@
-https://gist.githubusercontent.com/DylanAlloy/aa07401ebc920ba11ec6b8f503e4676b/raw/3b7900ec4bec18d671c12969c9cdd4d741c045da/.pre-commit-config.yaml
-https://gist.githubusercontent.com/DylanAlloy/d99a7494c8b84c2e99fce28468334aa5/raw/cd8c299db693875ec40ce84a03cab8d29fae2d25/commit-msg
+https://gist.githubusercontent.com/mxchinegod/aa07401ebc920ba11ec6b8f503e4676b/raw/3b7900ec4bec18d671c12969c9cdd4d741c045da/.pre-commit-config.yaml
+https://gist.githubusercontent.com/mxchinegod/d99a7494c8b84c2e99fce28468334aa5/raw/cd8c299db693875ec40ce84a03cab8d29fae2d25/commit-msg

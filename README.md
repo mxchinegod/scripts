@@ -13,7 +13,7 @@ An engineering toolbox (just MacOS for now)
 
 ### 🚀 Initialize
 
-#### 1️⃣ I start with [`macos/coldbrew.sh`](https://github.com/DylanAlloy/scripts/blob/main/macos/coldbrew.sh) which installs:
+#### 1️⃣ I start with [`macos/coldbrew.sh`](https://github.com/mxchinegod/scripts/blob/main/macos/coldbrew.sh) which installs:
 
 <table align="center">
 <thead>
@@ -146,44 +146,44 @@ Now it's time to check out what tools you have to enhance your workflow instantl
 
 <h3 id="-macos-"><code>macos/</code></h3>
 <p align="center">
-    ⚡️ <a href="https://github.com/DylanAlloy/scripts/blob/main/macos/wasm.sh"><code>wasm.sh</code></a>
+    ⚡️ <a href="https://github.com/mxchinegod/scripts/blob/main/macos/wasm.sh"><code>wasm.sh</code></a>
         <code align="center">[]</code>
 </p>
 <p align="center"><sub>installs Emscripten for C++ → wasm compilation & makes sure cmake is available</sub></p>
 
 <h3 id="-kubernetes-"><code>kubernetes/</code></h3>
 <p align="center">
-    🖨️ <a href="https://github.com/DylanAlloy/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
+    🖨️ <a href="https://github.com/mxchinegod/scripts/blob/main/kubernetes/copy.sh"><code>copy.sh</code></a>
         <code align="center">[config] [namespace] [remote path] [local file] [pod]</code>
 </p>
 <p align="center"><sub>remote pod to local filesystem copy</sub></p>
 
 <h3 id="-git-"><code>git/</code></h3>
 <p align="center">
-    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/whatarmy.sh"><code>whatarmy.sh</code></a>
+    🚀 <a href="https://github.com/mxchinegod/scripts/blob/main/git/whatarmy.sh"><code>whatarmy.sh</code></a>
         <code align="center">[clone path] [repos.txt location]</code>
 </p>
 <p align="center"><sub>mass clone</sub></p>
 <p align="center">
-    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.sh"><code>perfectionist.sh</code></a>
+    🚀 <a href="https://github.com/mxchinegod/scripts/blob/main/git/perfectionist.sh"><code>perfectionist.sh</code></a>
     <code align="center">[]</code>
 </p>
-<p align="center"><sub>auto-configure pre-commit and your git hooks using <a href="https://github.com/DylanAlloy/scripts/blob/main/git/perfectionist.txt"><code>perfectionist.txt</code></a></sub></p>
+<p align="center"><sub>auto-configure pre-commit and your git hooks using <a href="https://github.com/mxchinegod/scripts/blob/main/git/perfectionist.txt"><code>perfectionist.txt</code></a></sub></p>
 <p align="center">
-    🚀 <a href="https://github.com/DylanAlloy/scripts/blob/main/git/pythode.sh"><code>pythode.sh</code></a>
+    🚀 <a href="https://github.com/mxchinegod/scripts/blob/main/git/pythode.sh"><code>pythode.sh</code></a>
     <code align="center">[]</code>
 </p>
 <p align="center"><sub>detect subfolders in the current directory & installs python/node dependencies automagically</sub></p>
 
 <h3 id="-kubernetes-"><code>finance/</code></h3>
 <p align="center">
-    🗂️ <a href="https://github.com/DylanAlloy/scripts/blob/main/finance/pdf.sh"><code>pdf.sh</code></a>
+    🗂️ <a href="https://github.com/mxchinegod/scripts/blob/main/finance/pdf.sh"><code>pdf.sh</code></a>
         <code align="center">['fed' or a URL]</code>
 </p>
 <p align="center"><sub>scrapes all PDF links from a webpage</sub></p>
 <h3 id="-design-"><code>design/</code></h3>
 <p align="center">
-    🏁 <a href="https://github.com/DylanAlloy/scripts/blob/main/design/spinners.sh"><code>spinners.sh</code></a>
+    🏁 <a href="https://github.com/mxchinegod/scripts/blob/main/design/spinners.sh"><code>spinners.sh</code></a>
      <code align="center">[]</code>
 </p>
 <p align="center"><sub>demonstrates animated spinners</sub></p>

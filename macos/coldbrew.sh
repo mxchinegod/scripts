@@ -322,7 +322,7 @@ path () {
             purple "⛔️ Already added to your zsh aliases!?"
         else
             echo "" >> $HOME/.zshrc
-            echo "# Custom scripts path | https://github.com/DylanAlloy/scripts" >> $HOME/.zshrc
+            echo "# Custom scripts path | https://github.com/mxchinegod/scripts" >> $HOME/.zshrc
             echo "export $CURRENT" >> $HOME/.zshrc
             purple "✅ Added to $HOME/.zshrc with 'export $CURRENT'"
         fi
